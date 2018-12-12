@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net461;netcoreapp2.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <IsTool>true</IsTool>    
+    <PackageId>Package_MultiTargeted_NetFramework</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
+    <PackAsTool>true</PackAsTool>
+    <PackageId>Package_MultiTargeted_NetCore</PackageId>
+  </PropertyGroup>
+
+</Project>
